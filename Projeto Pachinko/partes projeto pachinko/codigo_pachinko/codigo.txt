@@ -1,0 +1,56 @@
+{
+   if (ledreceptor2 > 368)
+    {
+     if(stGool == false)
+     {
+       stGool = true;
+       digitalWrite(ledvermelho1, HIGH);   
+       delay(1000);
+       digitalWrite(ledvermelho1,LOW);   
+       //pontos++; 
+       
+       lcd.setCursor(5,1);
+       lcd.print(pontos);
+       delay(1000);
+     }
+    }
+   else stGool = false; 
+  }
+  
+  {     
+   if (ledreceptor3 > 368)
+    {
+     if(stGool == false)
+     {
+       stGool = true;
+       digitalWrite(ledverde2, HIGH);   
+       delay(1000);
+       digitalWrite(ledverde2,LOW);   
+       pontos++; 
+       
+       lcd.setCursor(5,1);
+       lcd.print(pontos);
+       delay(1000);
+     }
+    }
+   else stGool = false;
+  }
+  
+   {
+    if (ledreceptor4 > 368)
+     {
+      if(stGool == false)
+      {
+       stGool = true;
+       digitalWrite(ledvermelho2, HIGH);   
+       delay(1000);
+       digitalWrite(ledvermelho2,LOW);   
+       //pontos++; 
+       
+       lcd.setCursor(5,1);
+       lcd.print(pontos);
+       delay(1000);
+      }
+     }
+   else stGool = false; 
+  }

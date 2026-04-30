@@ -1,0 +1,47 @@
+ >>>>> Criando Robô Com Arduino <<<<<   
+  ##### Robôs, Projetos e Tutoriais! #####  
+  .:: Site principal: http://www.CriandoRoboComArduino.com/     
+  .:: Site secundário: http://www.TestCriandoRoboComArduino.com/  
+  ========== IMPORTANTE ==========   
+  O código está livre para usar, citar, alterar e compartilhar,  
+  desde que mantenha o site como referência.   
+  Obrigado.  
+  --------------------------------------------------------------------------------------------------  
+  Projeto: Como usar o botão liga e desliga do controle remoto (IR) para acender e apagar um led no arduino   
+  ---------------------------------------------------------------------------------------------------  
+ */   
+  #include <IRremote.h>// incluindo a biblioteca do infravermelho    
+  const int RECEBE_PINO = 11; // pino 11 no arduino    
+  int led = 7;// led no pino 7    
+  int liga_desliga = 0; //variável para saber se o led está ligado ou desligado    
+  int resultado = 0; //resultado do módulo (%) da divisão, se restar ele é 1, se não restar é 0    
+  IRrecv ir_recebe(RECEBE_PINO); // declarando a variável do sensor    
+  decode_results codigo_recebido; // resultado    
+  void setup()    
+  {    
+  Serial.begin(9600); //mostra o resultado no computador    
+  ir_recebe.enableIRIn(); // inicia a recepção    
+  pinMode(led, OUTPUT); //defini o led como saída    
+  }    
+  void loop() {    
+  if (ir_recebe.decode(&codigo_recebido)) {//verifica se um código foi recebido    
+   if (codigo_recebido.value != 0 ){   
+   Serial.println(codigo_recebido.value, HEX); //mostra no serial o resultado    
+   }   
+   //tem que colocar o 0x antes do número hexadecimal, pois só assim pode comparar no if    
+   //comparação do código do ir    
+   if (codigo_recebido.value == 0xFFA25D){// verifica se foi pressionado o liga/desliga do controle    
+   resultado = liga_desliga % 2;//vê o resultado do módulo (resto da divisão)    
+   if (resultado == 0) {//se da divisão não restar nada, ele ligará o led    
+    digitalWrite(led, HIGH);   
+    delay(500);     
+   }else{    
+    digitalWrite(led, LOW);    
+    delay(500);     
+   }    
+   liga_desliga++;    
+   }    
+   ir_recebe.resume(); // recebe o próximo código    
+   delay(200);    
+  }    
+  } 

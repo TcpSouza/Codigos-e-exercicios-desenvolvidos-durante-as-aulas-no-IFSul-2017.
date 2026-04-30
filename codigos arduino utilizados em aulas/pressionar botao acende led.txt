@@ -1,0 +1,90 @@
+void VeTeclas();   
+void Condicao1();
+
+int a = 0;
+
+
+void VeTeclas()
+{
+	if(e1) 
+	{
+		delay_ms (150);
+			if(e1) 
+			{
+				a++;
+				Condicao1();
+			}				
+
+
+void Condicao1()
+{
+	switch (a)
+	{
+    case 1:
+		if (e1)
+		{
+			delay_ms (150);
+				if((e1) || (a == 1))
+				{
+					s3 = 1;
+					s4 = 0;
+					s5 = 0;
+				}
+		}
+	break;	
+
+	case 2:
+		if (e1)
+		{
+			delay_ms (150);
+				if((e1) || (a == 2))
+				{
+					s3 = 1;
+					s4 = 1;
+					s5 = 0;
+				}
+		}
+	break;	
+
+	case 3:
+		if (e1)
+		{
+			delay_ms (150);
+				if((e1) || (a == 3))
+				{
+					s3 = 0;
+					s4 = 1;
+					s5 = 1;
+				}
+		}
+	break;	
+
+	case 4:
+		if (e1)
+		{		
+			delay_ms (150);
+				if((e1) || (a == 4))
+				{
+					s3 = 1;
+					s4 = 1;
+					s5 = 1;
+				}
+		}
+	break;
+
+	case 5:
+		if (e1)
+		{		
+			delay_ms (150);
+				if((e1) || (a == 5))
+				{
+					s3 = 0;
+					s4 = 0;
+					s5 = 0;
+				}
+		a = 0;
+		}
+	break;
+
+	}
+}

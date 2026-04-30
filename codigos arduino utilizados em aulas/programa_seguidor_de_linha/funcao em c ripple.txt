@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+/*
+    Calcula a tensão de ripple de um retificador
+
+    Entradas:
+        I: corrente da carga, em amperes
+        f: frequencia, em hertz
+        C: capacitancia, em Faraday
+
+    Retorna a tensão de ripple sobre a carga, em volts, ou zero em caso de erro
+*/
+float ripple(float I, float f, float C)
+{
+    float Vripple;
+
+    if( (f <= 0) || (C <= 0) )
+    {
+        printf("parametro invalido\n");
+        return(0);
+    }
+
+    Vripple = I / (f * C);
+
+    return(Vripple);
+}
+
+int main()
+{
+    printf("tensão de ripple = %f volts\n", ripple(0.100 /* 100 mA */, 120 /* herts */, 0.001 /* 1000uF */) );
+
+    return(0);
+}

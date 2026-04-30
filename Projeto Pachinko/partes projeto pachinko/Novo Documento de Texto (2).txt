@@ -1,0 +1,22 @@
+if (ledreceptor2 > 368)
+    {
+     digitalWrite(ledvermelho1, HIGH);   
+     delay(1500);
+     digitalWrite(ledvermelho1, LOW);     
+    }    
+  if (ledreceptor3 > 368)
+    {
+     digitalWrite(ledverde2, HIGH);   
+     delay(1500);
+     digitalWrite(ledverde2, LOW);  
+     pontos++;  
+     lcd.setCursor(5,0);
+     lcd.print(pontos);
+     delay(1000); 
+    }   
+  if (ledreceptor4 > 368)
+    {
+     digitalWrite(ledvermelho2, HIGH);   
+     delay(1500);
+     digitalWrite(ledvermelho2, LOW);     
+    }   
