@@ -1,4 +1,4 @@
-# -Códigos-e-exercícios-desenvolvidos-durante-as-aulas-no-IFSul-2017-utilizando-Arduino.-
+# -Códigos-e-exercícios-desenvolvidos-durante-as-aulas-no-IFSul-2017.-
 "Estudante de Ciência da Computação. Organizando meu histórico de aprendizado (IFSul 2017)."
 # Estudos IFSul (2015-2017)
 
