@@ -1,12 +1,12 @@
 algoritmo "Exercicios avaliacao"
-// Função : Exercicio numero 4
+// FunÃ§Ã£o : Exercicio numero 4
 // Autores : Tiago Lima
-// Seção de Declarações
+// SeÃ§Ã£o de DeclaraÃ§Ãµes
 var
 numero,x,y:inteiro
 s:caracter
 inicio
-// Seção de Comandos
+// SeÃ§Ã£o de Comandos
 s<-"s"
 enquanto s="s" faca
 Escreval ("Programa que informa numeros de 1 ate numero digitado") // Escreval= escrever em linhas diferentes
