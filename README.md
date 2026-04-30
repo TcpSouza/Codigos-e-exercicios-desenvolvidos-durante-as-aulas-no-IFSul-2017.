@@ -9,6 +9,6 @@ O objetivo é preservar meu histórico de aprendizado e a evolução da minha l�
 ## 📂 Tecnologias Encontradas
 - **Arduino**: Prototipagem e controle de componentes eletrônicos.
 - **Visualg**: Exercicios de aulas de lógica e algoritmos.
-- - **C/C++**: Exercícios de aulas de lógica e algoritmos.
+- **C/C++**: Exercícios de aulas de lógica e algoritmos.
 ---
 *Organizado em 2026 como parte do meu portfólio de estudante de Ciência da Computação.*
